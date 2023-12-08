@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 //main colors
 const primaryColor = Color(0xffE43044);
 
-const primaryBackgroundColor = Color(0xff0D242C); //00080D
+const primaryBackgroundColor = Color(0xff0D242C); //
 const scaffholdBackgroundColor = Color(0xff00080D);
 
 const borderColor = Color(0xFF122A33);
@@ -18,9 +18,11 @@ const textColorDark = Color(0xFF4D5F66);
 const secondaryTextColor = Color(0xFF48C5BD);
 
 const primaryDarkColor = Color(0xFF01131B);
-const secondaryColor = Color(0xffDFB14C);
+const secondaryColor = Color(0xFF48C5BD);
 
 const grayColor = Color(0xFFC1C5C6);
+const yellowColor = Color(0xFFFAB069);
+
 const grayShade50 = Color(0xFFF9FAFB); //F9FAFB
 
 const lightGrayColor = Color(0xFFE5E5EA);
@@ -44,16 +46,16 @@ const MaterialColor grey = MaterialColor(
 const MaterialColor primarySwatch = MaterialColor(
   0xffE43044, //
   <int, Color>{
-    50: Color(0xfff1fafa), //10%
-    100: Color(0xffdbeff2), //20%
-    200: Color(0xffbbdfe6), //30%
-    300: Color(0xff8dc7d3), //40%
-    400: Color(0xff56a7ba), //50%
-    500: Color(0xFF3b8b9f), //60%
-    600: Color(0xff347286), //70%
-    700: Color(0xff2f5e6f), //80%
-    800: Color(0xff2e4f5c), //90%
-    900: Color(0xff263d48), //100%
+    50: Color(0xffcd2b3d), //10%
+    100: Color(0xffb62636), //20%
+    200: Color(0xffa02230), //30%
+    300: Color(0xff863342), //40%
+    400: Color(0xff721822), //50%
+    500: Color(0xFF5b131b), //60%
+    600: Color(0xff440e14), //70%
+    700: Color(0xff2e0a0e), //80%
+    800: Color(0xff170507), //90%
+    900: Color(0xff000000), //100%
   },
 );
 

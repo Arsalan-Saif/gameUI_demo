@@ -5,16 +5,18 @@ import '../../../config/theme.dart';
 class BuildOrderWidget extends StatelessWidget {
   const BuildOrderWidget({
     required this.image,
-    required this.label,
+    this.label,
+    this.borderShade,
     super.key,
   });
   final String image;
-  final String label;
+  final String? label;
+  final Color? borderShade;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(right: 10),
+      margin: EdgeInsets.only(right: borderShade == null ? 10 : 0),
       child: Column(
         children: [
           Container(
@@ -22,7 +24,7 @@ class BuildOrderWidget extends StatelessWidget {
             height: 40,
             decoration: BoxDecoration(
               border: Border.all(
-                color: borderColor2,
+                color: borderShade ?? borderColor2,
                 width: 4,
               ),
               borderRadius: BorderRadius.circular(8),
@@ -35,15 +37,16 @@ class BuildOrderWidget extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 4),
-          Text(
-            label,
-            style: const TextStyle(
-              color: textColor,
-              fontSize: 10,
-              fontFamily: 'Poppins',
-              fontWeight: FontWeight.w500,
-            ),
-          )
+          if (label != null)
+            Text(
+              label ?? '',
+              style: const TextStyle(
+                color: textColor,
+                fontSize: 10,
+                fontFamily: 'Poppins',
+                fontWeight: FontWeight.w500,
+              ),
+            )
         ],
       ),
     );

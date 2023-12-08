@@ -131,16 +131,16 @@ class CustomeAppBar extends GetView<HomeController>
       bottom: TabBar(
           isScrollable: true,
           tabAlignment: TabAlignment.start,
+          splashFactory: NoSplash.splashFactory,
           // onTap: (index) => controller.onTabIndex(index),
           controller: controller.tabController,
           labelPadding:
               const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
           labelColor: primaryColor,
           unselectedLabelColor: textColorDark,
-          // splashBorderRadius: BorderRadius.circular(40),
           dividerColor: Colors.transparent,
           indicatorColor: Colors.transparent,
-          // indicatorWeight: 2,
+          enableFeedback: false,
           indicatorSize: TabBarIndicatorSize.label,
           indicatorPadding:
               const EdgeInsets.only(right: 10, left: 10, top: 55, bottom: 0),

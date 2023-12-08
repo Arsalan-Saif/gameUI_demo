@@ -2,13 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:game_u_i_demo/app/config/size_config.dart';
 import 'package:game_u_i_demo/app/config/theme.dart';
 import 'package:game_u_i_demo/app/global_widgets/line_container.dart';
+import 'package:game_u_i_demo/app/modules/home/widgets/build_order_widget.dart';
 
 import 'package:get/get.dart';
 
+import '../component/build_order_list.dart';
 import '../controllers/home_controller.dart';
-import '../widgets/build_order_widget.dart';
 import '../widgets/custom_chip.dart';
 import '../widgets/custome_app_bar.dart';
+import '../component/spells_damage_widget.dart';
+import '../widgets/ruines_item.dart';
 import '../widgets/state_widget.dart';
 
 class HomeView extends GetView<HomeController> {
@@ -139,55 +142,178 @@ class HomeView extends GetView<HomeController> {
                             ),
                           ),
                           const SizedBox(height: 4),
-                          const SingleChildScrollView(
-                            scrollDirection: Axis.horizontal,
-                            child: Row(
-                              children: [
-                                BuildOrderWidget(
-                                    label: 'Starting',
-                                    image: "assets/build_1.png"),
-                                BuildOrderWidget(
-                                    label: '1st', image: "assets/build_2.png"),
-                                BuildOrderWidget(
-                                    label: '2st', image: "assets/build_3.png"),
-                                BuildOrderWidget(
-                                    label: '3st', image: "assets/build_4.png"),
-                                BuildOrderWidget(
-                                    label: '4st', image: "assets/build_5.png"),
-                                BuildOrderWidget(
-                                    label: '5st', image: "assets/build_6.png"),
-                                BuildOrderWidget(
-                                    label: '6st', image: "assets/build_7.png"),
-                              ],
-                            ),
-                          ),
+                          const BuildOrderList(),
                           const SizedBox(height: 6),
                           lineContainer(),
                           const SizedBox(height: 16),
-                          const Row(
+                          const SpellsDamageSection(),
+                          const SizedBox(height: 6),
+                          lineContainer(),
+                          const SizedBox(height: 20),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Column(
+                              const Text(
+                                'Runes',
+                                style: TextStyle(
+                                  color: textColor,
+                                  fontSize: 12,
+                                  fontFamily: 'Poppins',
+                                  fontWeight: FontWeight.w500,
+                                ),
+                              ),
+                              const SizedBox(height: 8),
+                              const Text(
+                                'Domincation',
+                                style: TextStyle(
+                                  color: primaryColor,
+                                  fontSize: 12,
+                                  fontFamily: 'Poppins',
+                                  fontWeight: FontWeight.w500,
+                                ),
+                              ),
+                              const SizedBox(height: 8),
+                              Row(
                                 children: [
-                                  Text(
-                                    'Summoner Spells',
-                                    style: TextStyle(
-                                      color: textColor,
-                                      fontSize: 12,
-                                      fontFamily: 'Poppins',
-                                      fontWeight: FontWeight.w500,
+                                  const RunesItem(
+                                      image: "assets/runes_1.png",
+                                      bgColor: Color(0xFF45212E)),
+                                  Container(
+                                    width: 16,
+                                    height: 4,
+                                    decoration: BoxDecoration(
+                                      color: primarySwatch.shade300,
+                                      // borderRadius: BorderRadius.circular(4),
                                     ),
                                   ),
-                                  SizedBox(height: 8),
-                                  Row(
-                                    children: [
-                                      BuildOrderWidget(
-                                          label: '',
-                                          image: "assets/spell_1.png"),
-                                      BuildOrderWidget(
-                                          label: '',
-                                          image: "assets/spell_2.png"),
-                                    ],
+                                  const BuildOrderWidget(
+                                    image: "assets/runes_2.png",
+                                    borderShade: Color(0xFF45212E),
+                                  ),
+                                  Container(
+                                    width: 16,
+                                    height: 4,
+                                    decoration: BoxDecoration(
+                                      color: primarySwatch.shade300,
+                                      // borderRadius: BorderRadius.circular(4),
+                                    ),
+                                  ),
+                                  const BuildOrderWidget(
+                                    image: "assets/runes_3.png",
+                                    borderShade: Color(0xFF45212E),
+                                  ),
+                                  Container(
+                                    width: 16,
+                                    height: 4,
+                                    decoration: BoxDecoration(
+                                      color: primarySwatch.shade300,
+                                      // borderRadius: BorderRadius.circular(4),
+                                    ),
+                                  ),
+                                  const BuildOrderWidget(
+                                    image: "assets/runes_4.png",
+                                    borderShade: Color(0xFF45212E),
                                   )
+                                ],
+                              ),
+                              const SizedBox(height: 8),
+                              Row(
+                                children: [
+                                  Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      const Text(
+                                        'Secery',
+                                        style: TextStyle(
+                                          color: Color(0xFF775F93),
+                                          fontSize: 12,
+                                          fontFamily: 'Poppins',
+                                          fontWeight: FontWeight.w500,
+                                        ),
+                                      ),
+                                      const SizedBox(height: 8),
+                                      Row(
+                                        children: [
+                                          const RunesItem(
+                                            image: "assets/runes_5.png",
+                                            bgColor: Color(0xFF372145),
+                                            borderSideColor: Color(0xFF775F93),
+                                          ),
+                                          Container(
+                                            width: 16,
+                                            height: 4,
+                                            decoration: const BoxDecoration(
+                                              color:
+                                                  Color(0xFF755B9A), //#755B9A
+                                              // borderRadius: BorderRadius.circular(4),
+                                            ),
+                                          ),
+                                          const BuildOrderWidget(
+                                            image: "assets/runes_2.png",
+                                            borderShade: Color(0xFF372145),
+                                          ),
+                                          Container(
+                                            width: 16,
+                                            height: 4,
+                                            decoration: const BoxDecoration(
+                                              color: Color(0xFF755B9A),
+                                            ),
+                                          ),
+                                          const BuildOrderWidget(
+                                            image: "assets/runes_3.png",
+                                            borderShade: Color(0xFF372145),
+                                          ),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                  const SizedBox(width: 10),
+                                  Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      const Text(
+                                        'Shards',
+                                        style: TextStyle(
+                                          color: textColor,
+                                          fontSize: 12,
+                                          fontFamily: 'Poppins',
+                                          fontWeight: FontWeight.w500,
+                                        ),
+                                      ),
+                                      const SizedBox(height: 8),
+                                      Row(
+                                        children: [
+                                          const BuildOrderWidget(
+                                            image: "assets/shard_1.png",
+                                            borderShade: borderColor2,
+                                          ),
+                                          Container(
+                                            width: 12,
+                                            height: 4,
+                                            decoration: const BoxDecoration(
+                                              color: borderColor2, //#755B9A
+                                              // borderRadius: BorderRadius.circular(4),
+                                            ),
+                                          ),
+                                          const BuildOrderWidget(
+                                              image: "assets/shard_2.png",
+                                              borderShade: borderColor2),
+                                          Container(
+                                            width: 12,
+                                            height: 4,
+                                            decoration: const BoxDecoration(
+                                              color: borderColor2,
+                                            ),
+                                          ),
+                                          const BuildOrderWidget(
+                                              image: "assets/shard_3.png",
+                                              borderShade: borderColor2),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
                                 ],
                               ),
                             ],
