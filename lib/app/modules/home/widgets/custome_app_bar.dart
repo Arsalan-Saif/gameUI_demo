@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import '../../../config/size_config.dart';
 import '../../../config/theme.dart';
 import '../controllers/home_controller.dart';
+import 'header_icon.dart';
 
 class CustomeAppBar extends GetView<HomeController>
     implements PreferredSizeWidget {
@@ -14,14 +15,14 @@ class CustomeAppBar extends GetView<HomeController>
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      // elevation: 3,
+      // snap: true,
+      // floating: true,
       leadingWidth: double.maxFinite,
       backgroundColor: primaryBackgroundColor,
       leading: Container(
-        // color: primaryBackgroundColor.withOpacity(0.5),
-        decoration: BoxDecoration(
-            color: primaryBackgroundColor.withOpacity(0.5),
-            backgroundBlendMode: BlendMode.darken),
+        // decoration: BoxDecoration(
+        //     color: primaryBackgroundColor.withOpacity(0.5),
+        //     backgroundBlendMode: BlendMode.darken),
         padding: const EdgeInsets.symmetric(horizontal: 8.0),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -78,26 +79,16 @@ class CustomeAppBar extends GetView<HomeController>
                     // crossAxisAlignment: CrossAxisAlignment.end,
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Image(
-                        image: AssetImage('assets/Group 81.png'),
-                        fit: BoxFit.cover,
-                      ),
-                      Image(
-                        image: AssetImage('assets/Group 77.png'),
-                        fit: BoxFit.cover,
-                      ),
-                      Image(
-                        image: AssetImage('assets/Group 78.png'),
-                        fit: BoxFit.cover,
-                      ),
-                      Image(
-                        image: AssetImage('assets/Group 79.png'),
-                        fit: BoxFit.cover,
-                      ),
-                      Image(
-                        image: AssetImage('assets/Group 80.png'),
-                        fit: BoxFit.cover,
-                      ),
+                      HeaderIcon(
+                          label: "P", image: 'assets/Action Buttons.png'),
+                      HeaderIcon(
+                          label: "Q", image: 'assets/Action Buttons2.png'),
+                      HeaderIcon(
+                          label: "W", image: 'assets/Action Buttons3.png'),
+                      HeaderIcon(
+                          label: "E", image: 'assets/Action Buttons4.png'),
+                      HeaderIcon(
+                          label: "R", image: 'assets/Action Buttons5.png'),
                     ],
                   ),
                 ],
@@ -140,10 +131,20 @@ class CustomeAppBar extends GetView<HomeController>
           indicatorColor: Colors.transparent,
           enableFeedback: false,
           indicatorSize: TabBarIndicatorSize.label,
+          indicatorWeight: 2,
+          // splashBorderRadius: BorderRadius.circular(48),
           indicatorPadding:
-              const EdgeInsets.only(right: 10, left: 10, top: 55, bottom: 0),
+              const EdgeInsets.only(right: 10, left: 10, top: 60, bottom: 0),
+          // indicator: const UnderlineTabIndicator(
+          //     borderRadius: BorderRadius.only(
+          //       topLeft: Radius.circular(5),
+          //       topRight: Radius.circular(5),
+          //     ),
+          //     borderSide: BorderSide(width: 5.0, color: primaryColor),
+          //     insets: EdgeInsets.symmetric(horizontal: 15.0)),
           indicator: BoxDecoration(
               boxShadow: shadowList,
+              borderRadius: BorderRadius.circular(2),
               border: const Border(
                 bottom: BorderSide(color: primaryColor, width: 2),
               )),

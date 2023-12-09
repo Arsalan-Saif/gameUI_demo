@@ -26,7 +26,7 @@ class HomeView extends GetView<HomeController> {
           children: [
             Padding(
               padding:
-                  const EdgeInsets.symmetric(vertical: 20.0, horizontal: 0),
+                  const EdgeInsets.symmetric(vertical: 16.0, horizontal: 0),
               child: SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
