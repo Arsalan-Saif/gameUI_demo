@@ -110,8 +110,6 @@ class CustomeAppBar extends GetView<HomeController>
         children: [
           Image(
             height: SizeConfig.screenHeight! * 0.23,
-            // color: primaryBackgroundColor.withOpacity(0.8),
-            // colorBlendMode: BlendMode.modulate,
             image: const AssetImage('assets/Rectangle 20.png'),
             fit: BoxFit.cover,
           ),

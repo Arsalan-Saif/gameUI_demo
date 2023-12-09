@@ -48,7 +48,7 @@ const MaterialColor primarySwatch = MaterialColor(
   <int, Color>{
     50: Color(0xffcd2b3d), //10%
     100: Color(0xffb62636), //20%
-    200: Color(0xffa02230), //30%
+    200: Color(0xFFEC635E), //30%
     300: Color(0xff863342), //40%
     400: Color(0xff721822), //50%
     500: Color(0xFF5b131b), //60%
