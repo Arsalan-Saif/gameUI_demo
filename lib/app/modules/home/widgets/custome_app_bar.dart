@@ -14,7 +14,7 @@ class CustomeAppBar extends GetView<HomeController>
 
   @override
   Widget build(BuildContext context) {
-    return AppBar(
+    return SliverAppBar(
       // snap: true,
       // floating: true,
       leadingWidth: double.maxFinite,
