@@ -55,7 +55,6 @@ class RunesSection extends StatelessWidget {
                 height: 4,
                 decoration: BoxDecoration(
                   color: primarySwatch.shade300,
-                  // borderRadius: BorderRadius.circular(4),
                 ),
               ),
               const BuildOrderWidget(
@@ -67,7 +66,6 @@ class RunesSection extends StatelessWidget {
                 height: 4,
                 decoration: BoxDecoration(
                   color: primarySwatch.shade300,
-                  // borderRadius: BorderRadius.circular(4),
                 ),
               ),
               const BuildOrderWidget(
@@ -79,7 +77,6 @@ class RunesSection extends StatelessWidget {
                 height: 4,
                 decoration: BoxDecoration(
                   color: primarySwatch.shade300,
-                  // borderRadius: BorderRadius.circular(4),
                 ),
               ),
               const BuildOrderWidget(

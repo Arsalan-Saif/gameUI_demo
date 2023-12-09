@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:game_u_i_demo/app/config/size_config.dart';
 import 'package:game_u_i_demo/app/config/theme.dart';
+import 'package:game_u_i_demo/app/modules/home/component/top_players_list.dart';
 import 'package:get/get.dart';
 
+import '../../../global_widgets/custome_container.dart';
 import '../component/core_build_widget.dart';
+import '../component/master_list.dart';
 import '../controllers/home_controller.dart';
 import '../widgets/custom_chip.dart';
 import '../widgets/custome_app_bar.dart';
@@ -56,13 +59,13 @@ class HomeView extends GetView<HomeController> {
                 ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 18.0),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 18.0),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text(
+                  Text(
                     'Stats',
                     style: TextStyle(
                       color: Colors.white,
@@ -72,7 +75,7 @@ class HomeView extends GetView<HomeController> {
                     ),
                   ),
                   // SizedBox(height: 4),
-                  const Text(
+                  Text(
                     'State for the current season',
                     style: TextStyle(
                       color: textColor,
@@ -81,8 +84,8 @@ class HomeView extends GetView<HomeController> {
                       fontWeight: FontWeight.w400,
                     ),
                   ),
-                  const SizedBox(height: 10),
-                  const SingleChildScrollView(
+                  SizedBox(height: 10),
+                  SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     child: Row(
                       children: [
@@ -92,8 +95,8 @@ class HomeView extends GetView<HomeController> {
                       ],
                     ),
                   ),
-                  const SizedBox(height: 16),
-                  const Text(
+                  SizedBox(height: 16),
+                  Text(
                     'Core Build',
                     style: TextStyle(
                       color: Colors.white,
@@ -103,7 +106,7 @@ class HomeView extends GetView<HomeController> {
                     ),
                   ),
                   // SizedBox(height: 4),
-                  const Text(
+                  Text(
                     'State for the current season',
                     style: TextStyle(
                       color: textColor,
@@ -112,19 +115,53 @@ class HomeView extends GetView<HomeController> {
                       fontWeight: FontWeight.w400,
                     ),
                   ),
-                  const SizedBox(height: 10),
-                  Container(
-                    width: double.maxFinite,
-                    padding: const EdgeInsets.symmetric(vertical: 16),
-                    decoration: ShapeDecoration(
-                      color: primaryBackgroundColor,
-                      shape: RoundedRectangleBorder(
-                        side: const BorderSide(width: 1, color: borderColor),
-                        borderRadius: BorderRadius.circular(8),
-                      ),
+                  SizedBox(height: 10),
+                  CustomeContainer(child: CoreBuildSection()),
+                  SizedBox(height: 16),
+                  Text(
+                    'Lee Sin Masters',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 18,
+                      fontFamily: 'Poppins',
+                      fontWeight: FontWeight.w700,
                     ),
-                    child: const CoreBuildSection(),
-                  )
+                  ),
+                  // SizedBox(height: 4),
+                  Text(
+                    'Latest news for the game',
+                    style: TextStyle(
+                      color: textColor,
+                      fontSize: 14,
+                      fontFamily: 'Poppins',
+                      fontWeight: FontWeight.w400,
+                    ),
+                  ),
+                  SizedBox(height: 10),
+                  CustomeContainer(padding: 11, child: MasterListSection()),
+                  SizedBox(height: 16),
+                  Text(
+                    'Top Players in the app',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 18,
+                      fontFamily: 'Poppins',
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                  // SizedBox(height: 4),
+                  Text(
+                    'Latest news for the game',
+                    style: TextStyle(
+                      color: textColor,
+                      fontSize: 14,
+                      fontFamily: 'Poppins',
+                      fontWeight: FontWeight.w400,
+                    ),
+                  ),
+                  SizedBox(height: 10),
+                  CustomeContainer(padding: 11, child: TopPlayersListSection()),
+                  SizedBox(height: 20),
                 ],
               ),
             ),

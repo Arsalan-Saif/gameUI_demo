@@ -7,6 +7,8 @@ class HomeController extends GetxController
   late TabController tabController;
   final count = 0.obs;
 
+  RxInt selected = 0.obs;
+
   @override
   void onInit() {
     super.onInit();
