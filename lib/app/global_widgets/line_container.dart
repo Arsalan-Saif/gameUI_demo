@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-Container lineContainer() {
+Container lineContainer({double margin = 10}) {
   return Container(
-    margin: const EdgeInsets.only(
-      top: 10,
+    margin: EdgeInsets.only(
+      top: margin,
     ),
     // width: double.maxFinite,
     height: 1,

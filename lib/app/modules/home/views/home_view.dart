@@ -22,9 +22,9 @@ class HomeView extends GetView<HomeController> {
       body: NestedScrollView(
         floatHeaderSlivers: true,
         headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
-          return [CustomeAppBar()];
+          return [const CustomeAppBar()];
         },
-        body: BodyWidget(),
+        body: const BodyWidget(),
 
         // builder: (context) {
         //   return BodyWidget();

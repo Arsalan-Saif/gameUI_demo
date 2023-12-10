@@ -46,15 +46,17 @@ class TopPlayersListSection extends GetView<HomeController> {
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(8)),
                           ),
-                          child: Text(
-                            'Lose lane aginst',
-                            style: TextStyle(
-                              color: controller.selected.value == 0
-                                  ? Colors.white
-                                  : textColor,
-                              fontSize: 14,
-                              fontFamily: 'Poppins',
-                              fontWeight: FontWeight.w500,
+                          child: Center(
+                            child: Text(
+                              'Lose lane aginst',
+                              style: TextStyle(
+                                color: controller.selected.value == 0
+                                    ? Colors.white
+                                    : textColor,
+                                fontSize: 14,
+                                fontFamily: 'Poppins',
+                                fontWeight: FontWeight.w500,
+                              ),
                             ),
                           ),
                         ),
@@ -75,15 +77,17 @@ class TopPlayersListSection extends GetView<HomeController> {
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(8)),
                           ),
-                          child: Text(
-                            'Win lane aginst',
-                            style: TextStyle(
-                              color: controller.selected.value == 1
-                                  ? Colors.white
-                                  : textColor,
-                              fontSize: 14,
-                              fontFamily: 'Poppins',
-                              fontWeight: FontWeight.w500,
+                          child: Center(
+                            child: Text(
+                              'Win lane aginst',
+                              style: TextStyle(
+                                color: controller.selected.value == 1
+                                    ? Colors.white
+                                    : textColor,
+                                fontSize: 14,
+                                fontFamily: 'Poppins',
+                                fontWeight: FontWeight.w500,
+                              ),
                             ),
                           ),
                         ),

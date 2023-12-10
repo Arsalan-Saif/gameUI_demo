@@ -133,8 +133,7 @@ class CustomeAppBar extends GetView<HomeController>
           indicatorSize: TabBarIndicatorSize.label,
           indicatorWeight: 2,
           // splashBorderRadius: BorderRadius.circular(48),
-          indicatorPadding:
-              const EdgeInsets.only(right: 10, left: 10, top: 60, bottom: 0),
+          indicatorPadding: const EdgeInsets.only(right: 10, left: 10, top: 60),
           // indicator: const UnderlineTabIndicator(
           //     borderRadius: BorderRadius.only(
           //       topLeft: Radius.circular(5),

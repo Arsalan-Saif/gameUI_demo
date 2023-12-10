@@ -48,6 +48,11 @@ class CoreBuildSection extends StatelessWidget {
         child: lineContainer(),
       ),
       const RunesSection(),
+      Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 16.0),
+        child: lineContainer(margin: 0),
+      ),
+      const SizedBox(height: 16),
       const SkillOrderSection(),
     ]);
   }

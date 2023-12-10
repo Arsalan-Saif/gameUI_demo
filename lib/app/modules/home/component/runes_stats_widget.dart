@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:game_u_i_demo/app/config/size_config.dart';
 
 import '../../../config/theme.dart';
-import '../../../global_widgets/line_container.dart';
 import '../widgets/build_order_widget.dart';
 import '../widgets/ruines_item.dart';
 
@@ -22,9 +22,10 @@ class RunesSection extends StatelessWidget {
           ),
           image: DecorationImage(
               image: AssetImage("assets/Rectangle 193.png"),
-              fit: BoxFit.contain)),
+              fit: BoxFit.cover)),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
+        // mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           const Text(
             'Runes',
@@ -109,7 +110,7 @@ class RunesSection extends StatelessWidget {
                         borderSideColor: Color(0xFF775F93),
                       ),
                       Container(
-                        width: 16,
+                        width: SizeConfig.screenWidth! > 360 ? 16 : 10,
                         height: 4,
                         decoration: const BoxDecoration(
                           color: Color(0xFF755B9A), //#755B9A
@@ -121,7 +122,7 @@ class RunesSection extends StatelessWidget {
                         borderShade: Color(0xFF372145),
                       ),
                       Container(
-                        width: 16,
+                        width: SizeConfig.screenWidth! > 360 ? 16 : 10,
                         height: 4,
                         decoration: const BoxDecoration(
                           color: Color(0xFF755B9A),
@@ -182,8 +183,9 @@ class RunesSection extends StatelessWidget {
               ),
             ],
           ),
-          const SizedBox(height: 10),
-          lineContainer(),
+          // Spacer(),
+          // const SizedBox(height: 10),
+          // lineContainer(),
         ],
       ),
     );
